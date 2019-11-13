@@ -1,0 +1,2 @@
+# TemoCtor
+Interview preparation AI
