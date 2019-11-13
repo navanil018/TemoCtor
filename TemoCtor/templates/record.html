@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Temoctortor</title>	
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <link href="static/styles/app.css" rel="stylesheet" type="text/css">
+	<style class="cp-pen-styles">body {
+
+  min-height: 100vh;
+  background: #0264d6;
+  background: -moz-radial-gradient(center, ellipse cover,  #0264d6 1%, #1c2b5a 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#0264d6), color-stop(100%,#1c2b5a)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #0264d6 1%,#1c2b5a 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #07482a 1%,#185014e6 100%); /* W3C */
+
+}
+</style>
+  </head>
+  <script type="text/javascript">
+    var csrf_token = "{{ csrf_token() }}";
+	var thatval = "{{ thismaval }}".split(",");
+	var intmax = 0;
+  </script>
+  <script src="/static/scripts/webcam.js"></script>
+  <body>
+<table>
+<tr>
+<td>
+    <div class="wrapper">
+
+      <header>
+        <h1 class="myfonter">TemoC/\tor</h1>
+      </header>
+
+      <section class="top-display">
+	<div class="directions">
+	<div style="font-size:20px">Lets start the interview               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timer: <span id="time">05:00</span> minutes </div>
+
+	</div>
+
+	<div class="info-display" style="width:680px;">
+	</div>
+	<div  style="padding-top:20px;width:680px; height:380px;" id="my_camera"></div>
+      </section>
+
+      <section class="main-controls">
+        <canvas class="visualizer" style="display:none;"></canvas>
+        <div id="buttons" style="width:680px;">
+          <button class="record" style="background-color:#4ef18f">Start</button>
+          <button class="stop" style="background-color:#f14e4e">End</button>
+          <button class="upload" style="background-color:#4e9af1">Rate</button>
+        </div>
+      </section>
+
+      <section class="sound-clips">
+
+        <!-- This is left here as a helper for testing the style of the clips
+        If you want to edit their appearance without having to record clips,
+        uncomment this and reload the page. Remember to comment it again when done!
+        <article class="clip">
+          <audio controls></audio>
+          <p>Sample clip name</p>
+          <button class="delete">Delete</button>
+        </article>
+        -->
+
+      </section>
+
+    </div>
+</td>
+
+<td style="padding-left:45px; padding-top:250px; position: fixed; ">
+<h1>
+	<div class="progress-display" style="width:850px;padding-bottom:20px;">
+	</div>
+	</h1>
+<textarea style="font-size:20px" rows="11" cols="90" >
+Sometimes the text that we want are coming on the way.
+</textarea>
+<h2>
+	<div  style="width:850px;padding-bottom:20px;" id="myrate">
+	</div>
+	</h2>
+</td>
+</tr>
+</table>
+    <script src="static/scripts/app.js"></script>
+
+  </body>
+
+</html>

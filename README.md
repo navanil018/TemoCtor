@@ -1,2 +1,2 @@
-# TemoCtor
-Interview preparation AI
+# HackUTD
+HackUTD 2019: https://hackutd2019.devpost.com/
